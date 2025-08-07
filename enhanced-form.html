@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STUDEND Enrollment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      line-height: 1.6;
+    }
+    table, th, td {
+      border: 1px solid #333;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    fieldset {
+      margin-bottom: 1em;
+      padding: 1em;
+    }
+    label {
+      display: block;
+      margin-top: 0.5em;
+    }
+    input, select, textarea {
+      width: 100%;
+      max-width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>STUDENT ENROLLMENT</h1>
+    <p>This web page demonstrates the use of semantic elements, multimedia, and a fully functional HTML5 form with built-in validation.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Useful Study Tools for Students</h2>
+      <ul>
+        <li>Notion</li>
+        <li>Google Docs</li>
+        <li>Quizlet</li>
+        <li>Khan Academy</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Top Student Skills to Develop</h2>
+      <ol>
+        <li>Time Management</li>
+        <li>Critical Thinking</li>
+        <li>Teamwork</li>
+        <li>Research</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Student Enrollment List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Enrollment Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice Wanjiku</td>
+            <td>Web Development</td>
+            <td>Enrolled</td>
+          </tr>
+          <tr>
+            <td>Brian Otieno</td>
+            <td>Data Science</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>Caroline Mutua</td>
+            <td>UI/UX Design</td>
+            <td>Enrolled</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Student Introduction Video</h2>
+      <video width="400" controls>
+        <source src="vid.mp4" type="video/mp4">
+    
+      </video>
+    </section>
+
+    <section>
+      <h2>Student Registration Form</h2>
+      <form action="#" method="POST" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Danson Murithi" required minlength="3">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="xxx@example.com" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0700000000" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required pattern="[a-zA-Z0-9_]{4,}" placeholder="username_123">
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6" placeholder="Enter your password">
+
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required minlength="6" placeholder="Re-type your password">
+        </fieldset>
+
+        <fieldset>
+          <legend>Course Preferences</legend>
+
+          <label for="course">Select Course:</label>
+          <select id="course" name="course" required>
+            <option value="">-- Choose a course --</option>
+            <option value="web">Web Development</option>
+            <option value="data">Data Science</option>
+            <option value="design">UI/UX Design</option>
+          </select>
+
+          <label>
+            <input type="checkbox" name="newsletter" checked>
+            Subscribe to newsletter
+          </label>
+
+          <label for="referral">Referral Source:</label>
+          <input type="text" id="referral" name="referral" readonly value="Friend Recommendation">
+        </fieldset>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Registration Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
